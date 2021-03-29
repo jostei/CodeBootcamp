@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(176, 195, 197);
+  }
+h1{
+    font-size:xx-large;
+    color: black;
+}
+p {
+    font-size: large;
+    color: rgb(41, 40, 85);
+  }
+  
+a {
+    color: blue;
+  }

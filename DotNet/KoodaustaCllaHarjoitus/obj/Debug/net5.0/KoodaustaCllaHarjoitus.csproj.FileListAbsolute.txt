@@ -1,0 +1,16 @@
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.exe
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.deps.json
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.runtimeconfig.json
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.runtimeconfig.dev.json
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.dll
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\ref\KoodaustaCllaHarjoitus.dll
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\bin\Debug\net5.0\KoodaustaCllaHarjoitus.pdb
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.csprojAssemblyReference.cache
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.AssemblyInfoInputs.cache
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.AssemblyInfo.cs
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.csproj.CoreCompileInputs.cache
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.dll
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\ref\KoodaustaCllaHarjoitus.dll
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.pdb
+C:\Users\joset\Desktop\Code_bootcamp\DotNet\KoodaustaCllaHarjoitus\obj\Debug\net5.0\KoodaustaCllaHarjoitus.genruntimeconfig.cache
