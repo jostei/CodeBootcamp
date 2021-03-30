@@ -39,6 +39,8 @@ namespace Ohjelmalogiikkaa
                     Console.WriteLine(i);
                 }
             }
+
+            Console.WriteLine("Lukua pysyvaluku ei saa muuttaa ja sen arvo on aina: "+pysyvaluku);
         }
     }
 }
