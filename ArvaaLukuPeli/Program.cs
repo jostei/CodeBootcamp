@@ -45,6 +45,7 @@ namespace ArvaaLukuPeli
                     Console.Write(luku+" ");                    
                 }
             }
+            Console.WriteLine("Peli on päättynyt.");
         }
     }
 }
