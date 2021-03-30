@@ -1,3 +1,4 @@
+// Hello world parilla eri tyylillä
 const heippa = "Hello World!";
 let uusHeippa = "";
 

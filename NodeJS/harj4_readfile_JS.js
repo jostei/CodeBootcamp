@@ -1,3 +1,4 @@
+// Luetaan numerot oheisesta tiedostosta ja summataan ne yhteen
 const fs = require('fs');
 
 let data = fs.readFileSync('./numeroDir/numerot.txt', {encoding:'utf8'});

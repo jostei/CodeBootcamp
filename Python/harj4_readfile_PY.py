@@ -1,3 +1,4 @@
+# Ohjelma lukee oheisesta tiedostosta numerot ja summaa ne
 data = open("numeroDir/numerot.txt", "r")
 
 summa = 0

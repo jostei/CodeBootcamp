@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Ohjelma kysyy käyttäjältä tietoja ja vastaa niiden pohjalta
+using System;
 
 namespace KoodaustaCllaHarjoitus
 {

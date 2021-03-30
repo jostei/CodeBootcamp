@@ -1,4 +1,4 @@
-//import * as fs from 'fs';
+// Kirjoittaa oheiseen tiedostoon tekstiä
 const fs = require('fs');
 
 let data = "testi";

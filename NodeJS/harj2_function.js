@@ -1,3 +1,4 @@
+// Funktio summaa annetut argumentit yhteen 
 function summa() {
     var s = 0;
     for (var i = 0; i < arguments.length ; i++){
