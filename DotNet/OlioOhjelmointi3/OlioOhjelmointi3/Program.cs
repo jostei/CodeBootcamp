@@ -11,6 +11,9 @@ namespace OlioOhjelmointi3
             Auto perusauto = new();
             Urheiluauto sporttiauto = new();
 
+            perusauto.MaxNopeus = 180;
+            sporttiauto.MaxNopeus = 260;
+
             Console.WriteLine("\nAUTOSIMULAATTORI 1991\n");
             Console.WriteLine("Kontrolloi Autoa tai Urheiluautoa numeroilla 1-8 tai valitse 0 lopettaaksesi.");
             Console.WriteLine("[    Auto     ] 1: kaasuta, 2: jarruta, 3: avaa katto, 4: sulje katto");

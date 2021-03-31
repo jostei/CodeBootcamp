@@ -8,32 +8,33 @@ namespace OlioOhjelmointi3
 {
     class Auto
     {
-        private int nopeus = 0;
-        public int maxNopeus = 180;
+        public int Nopeus  { get; set; }
+        public int MaxNopeus { get; set; }
+
 
         public void PainaKaasua()
         {
-            if(nopeus == maxNopeus)
+            if(Nopeus == MaxNopeus)
             {
                 Console.WriteLine($"{this.GetType().Name} ei kulje kovempaa!");
             }
             else
             {
-                nopeus += 20;
-                Console.WriteLine($"Kaasutetaan {this.GetType().Name}a, nopeus on nyt {nopeus}");
+                Nopeus += 20;
+                Console.WriteLine($"Kaasutetaan {this.GetType().Name}a, nopeus on nyt {Nopeus}");
             }
         }
 
         public void PainaJarrua()
         {
-            if (nopeus == 0)
+            if (Nopeus == 0)
             {
                 Console.WriteLine($"{this.GetType().Name} ei liiku.");
             }
             else
             {
-                nopeus -= 20;
-                Console.WriteLine($"Jarrutetaan {this.GetType().Name}a, nopeus on nyt {nopeus}");
+                Nopeus -= 20;
+                Console.WriteLine($"Jarrutetaan {this.GetType().Name}a, nopeus on nyt {Nopeus}");
             }
         }
 

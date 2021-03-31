@@ -10,11 +10,6 @@ namespace OlioOhjelmointi3
     {
         private bool kattoAuki = false;
 
-        public Urheiluauto()
-        {
-            maxNopeus = 260;
-        }
-
         public void AvaaKatto()
         {
             if (!kattoAuki)
