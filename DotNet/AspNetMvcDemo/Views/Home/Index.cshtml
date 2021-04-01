@@ -6,15 +6,13 @@
     <h1 class="display-4">Web calculator</h1>
     <p>Input two numbers in empty fields and click "Add numbers".</p>
 
-  <label for="input1">First number:</label><br>
-  <input type="number" id="input1"><br>
+    <input type="number" id="input1" class="form-control mb-2" placeholder="first number"/>
+    <input type="number" id="input2" class="form-control mb-2" placeholder="second number"/><br><br>
 
-  <label for="input2">Second number:</label><br>
-  <input type="number" id="input2"><br><br>
+    <button id="sumButton" type="button" class="btn btn-primary">Add numbers</button><br><br>
 
-  <button id="sumButton">Add numbers</button><br><br>
-
-  <p id="output"></p>
+    <p id="output"></p>
+</div>
 
 <!-- Odotetaan Scripts osiota ennen suorittamista -->
 @section Scripts
@@ -28,11 +26,6 @@
 
         $("#output")[0].innerHTML = parseInt(luku1)+parseInt(luku2);
         }
-    );
-
+    )
   </script>
 }
-
-<p></p>
-
-</div>
