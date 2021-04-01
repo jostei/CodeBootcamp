@@ -1,3 +1,4 @@
+console.log("summaus.js scripti aloitettu");
 $("#sumButton").click(
     function()
     {
