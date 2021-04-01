@@ -7,26 +7,31 @@
     <p>Input two numbers in empty fields and click "Add numbers".</p>
 
   <label for="input1">First number:</label><br>
-  <input type="text" id="input1" name="input1"><br>
+  <input type="number" id="input1"><br>
 
   <label for="input2">Second number:</label><br>
-  <input type="text" id="input2" name="input2"><br><br>
+  <input type="number" id="input2"><br><br>
 
-  <button onclick="summari();">Add numbers</button><br><br>
+  <button id="sumButton">Add numbers</button><br><br>
 
   <p id="output"></p>
 
+<!-- Odotetaan Scripts osiota ennen suorittamista -->
+@section Scripts
+{
+  <script type="text/javascript">
+    $("#sumButton").click(
+        function()
+        {
+        const luku1 = $("#input1").val();
+        const luku2 = $("#input2").val();
 
-  <script>
-    function summari(){
-        let luku1 = parseInt(document.getElementById("input1").value);
-        let luku2 = parseInt(document.getElementById("input2").value);
+        $("#output")[0].innerHTML = parseInt(luku1)+parseInt(luku2);
+        }
+    );
 
-        console.log("JS saavutettu!"); // debuggausrivi
-        document.getElementById("output").innerHTML = parseInt(luku1)+parseInt(luku2);
-    }
   </script>
-
+}
 
 <p></p>
 
