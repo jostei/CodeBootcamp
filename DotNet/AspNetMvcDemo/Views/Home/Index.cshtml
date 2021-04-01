@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Web calculator</h1>
+    <p>Input two numbers in empty fields and click "Add numbers".</p>
+
+  <label for="input1">First number:</label><br>
+  <input type="text" id="input1" name="input1"><br>
+
+  <label for="input2">Second number:</label><br>
+  <input type="text" id="input2" name="input2"><br><br>
+
+  <button onclick="summari();">Add numbers</button><br><br>
+
+  <p id="output"></p>
+
+
+  <script>
+    function summari(){
+        let luku1 = parseInt(document.getElementById("input1").value);
+        let luku2 = parseInt(document.getElementById("input2").value);
+
+        console.log("JS saavutettu!"); // debuggausrivi
+        document.getElementById("output").innerHTML = parseInt(luku1)+parseInt(luku2);
+    }
+  </script>
+
+
+<p></p>
+
+</div>
