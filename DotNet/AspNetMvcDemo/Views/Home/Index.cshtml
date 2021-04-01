@@ -5,14 +5,47 @@
 <div class="text-center">
     <h1 class="display-4">Web calculator</h1>
     <p>Input two numbers in empty fields and click "Add numbers".</p>
-
-    <input type="number" id="input1" class="form-control mb-2" placeholder="first number"/>
-    <input type="number" id="input2" class="form-control mb-2" placeholder="second number"/><br><br>
-
-    <button id="sumButton" type="button" class="btn btn-primary">Add numbers</button><br><br>
-
-    <p id="output"></p>
 </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 offset-sm-3">
+            First number:
+        </div>
+        <div class="col-sm-3">
+            <input type="number" id="input1" class="form-control mb-2" placeholder="first number"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 offset-sm-3">
+            Second number:
+        </div>
+        <div class="col-sm-3">
+            <input type="number" id="input2" class="form-control mb-2" placeholder="second number"/>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 offset-sm-3">
+        </div>
+        <div class="col-sm-3">
+            <p><button id="sumButton" type="button" class="btn btn-primary">Add numbers</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2 offset-sm-3">
+        </div>
+        <div class="col-sm-3">
+            <p id="output"></p>
+        </div>
+    </div>
+</div>
+
 
 <!-- Odotetaan Scripts osiota ennen suorittamista -->
 @section Scripts
