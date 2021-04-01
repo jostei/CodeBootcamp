@@ -2,6 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!-- Siirretään suoritus Sripts-osioon -->
+@section Scripts
+{
+  <script type="text/javascript" src="~/js/summaus.js"></script>
+}
+
 <div class="text-center">
     <h1 class="display-4">Web calculator</h1>
     <p>Input two numbers in empty fields and click "Add numbers".</p>
@@ -43,9 +49,3 @@
         </div>
     </div>
 </div>
-
-<!-- Siirretään suoritus Sripts-osioon -->
-@section Scripts
-{
-  <script type="text/javascript" src="~/js/summaus.js"></script>
-}

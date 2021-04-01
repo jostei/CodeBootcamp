@@ -33,6 +33,11 @@ namespace AspNetMvcDemo.Controllers
             return View();
         }
 
+        public IActionResult Bonussivu()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
