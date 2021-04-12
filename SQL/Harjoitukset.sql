@@ -22,6 +22,10 @@ SELECT SUM(UnitPrice*UnitsInStock) AS 'Varaston arvo'
 FROM Products
 
 -- Tofun myynti (ProductID=14)
-SELECT SUM(UnitPrice*Quantity) AS 'Myyty summa'
+SELECT SUM(UnitPrice*(1-Discount)*Quantity) AS 'Tofun myynti'
 FROM [Order Details]
-WHERE ProductID=14
+WHERE ProductID IN (
+        SELECT ProductID 
+        FROM Products 
+        WHERE ProductName LIKE '%Tofu%'
+        )
