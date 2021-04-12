@@ -14,11 +14,14 @@ SELECT * FROM Employees
 WHERE City='London'
 
 -- Asiakkaiden määrä
-SELECT DISTINCT COUNT(CustomerID) FROM Customers
+SELECT COUNT(CustomerID) AS 'Asiakkaiden lukumäärä'
+FROM Customers
 
 -- Varaston arvo
-SELECT SUM(UnitPrice*UnitsInStock) FROM Products
+SELECT SUM(UnitPrice*UnitsInStock) AS 'Varaston arvo'
+FROM Products
 
--- Tofun myynti
-SELECT SUM(UnitPrice*Quantity) FROM [Order Details]
+-- Tofun myynti (ProductID=14)
+SELECT SUM(UnitPrice*Quantity) AS 'Myyty summa'
+FROM [Order Details]
 WHERE ProductID=14
