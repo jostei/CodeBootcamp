@@ -67,23 +67,24 @@ namespace AdoNetHarjoitus
             // Kysytään loput tiedot
             Customer c = ReadInfo();
             c.CustomerID = customerID;
-            string companyName = c.CompanyName;
-            string contactName = c.ContactName;
-            string contactTitle = c.ContactTitle;
-            string address = c.Address;
-            string city = c.City;
-            string region = c.Region;
-            string postalCode = c.PostalCode;
-            string country = c.Country;
-            string phone = c.Phone;
-            string fax = c.Fax;
 
-            Console.WriteLine($"Adding new row: {customerID}, {companyName}, {contactName}, {contactTitle}, {address}, {city}, {region}, {postalCode}, {country}, {phone}, {fax}");
-
-            // Syötä annetut arvot
+            // Parametrisoitu syöte
             string insertString = $"INSERT INTO Customers (CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax)" +
-                $" VALUES ('{customerID}','{companyName}','{contactName}','{contactTitle}','{address}','{city}','{region}','{postalCode}','{country}','{phone}','{fax}')";
+                $" VALUES (@customerID,@companyName,@contactName,@contactTitle,@address,@city,@region,@postalCode,@country,@phone,@fax)";
+
             command = new(insertString, sc);
+            command.Parameters.AddWithValue("@customerID", c.CustomerID);
+            command.Parameters.AddWithValue("@companyName", c.CompanyName);
+            command.Parameters.AddWithValue("@contactName", c.ContactName);
+            command.Parameters.AddWithValue("@contactTitle", c.ContactTitle);
+            command.Parameters.AddWithValue("@address", c.Address);
+            command.Parameters.AddWithValue("@city", c.City);
+            command.Parameters.AddWithValue("@region", c.Region);
+            command.Parameters.AddWithValue("@postalCode", c.PostalCode);
+            command.Parameters.AddWithValue("@country", c.Country);
+            command.Parameters.AddWithValue("@phone", c.Phone);
+            command.Parameters.AddWithValue("@fax", c.Fax);
+
             command.ExecuteNonQuery();
 
             // Suljetaan yhteys
