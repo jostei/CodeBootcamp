@@ -23,7 +23,7 @@ namespace AdoNetHarjoitus
             Console.WriteLine($"Connected to database {myDataBase}.");
             SqlDataReader reader = command.ExecuteReader();
 
-            // tulostetaan löydetyt nimet
+            // Tulostetaan löydetyt nimet
             Console.WriteLine("Customers from Finland:");
             while (reader.Read())
             {
@@ -39,16 +39,15 @@ namespace AdoNetHarjoitus
             string customerID = "";
             string idQueryString = "SELECT CustomerID FROM Customers";
             
-            // Ask for a unique Customer ID
+            // Kysytään uniikkia IDtä
             bool idInUse = true;
             while (idInUse)
             {
-                Console.WriteLine("Customer ID:");
+                Console.WriteLine("Customer ID (5 character, only letters and numbers):");
                 customerID = Console.ReadLine();
-                idInUse = false;
+                idInUse = true;
 
-                // Vertaa nykyisten asiakkaiden IDn kanssa
-                // Kysy uudestaan jos ID on jo käytössä
+                // Vertaa nykyisten asiakkaiden IDn kanssa, kysy uudestaan jos ID on jo käytössä
                 command = new(idQueryString, sc);
                 SqlDataReader idReader = command.ExecuteReader();
                 while (idReader.Read())
@@ -59,6 +58,7 @@ namespace AdoNetHarjoitus
                     {
                         idInUse = true;
                         Console.WriteLine("Customer ID already in use! Try again.");
+                        break;
                     }
                 }
                 idReader.Close();
