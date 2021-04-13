@@ -65,35 +65,18 @@ namespace AdoNetHarjoitus
             }
 
             // Kysytään loput tiedot
-            Console.WriteLine("Company name:");
-            string companyName = Console.ReadLine();
-
-            Console.WriteLine("Contact name:");
-            string contactName = Console.ReadLine();
-
-            Console.WriteLine("Contact title:");
-            string contactTitle = Console.ReadLine();
-
-            Console.WriteLine("Address:");
-            string address = Console.ReadLine();
-
-            Console.WriteLine("City:");
-            string city = Console.ReadLine();
-
-            Console.WriteLine("Region:");
-            string region = Console.ReadLine();
-
-            Console.WriteLine("Postal Code:");
-            string postalCode = Console.ReadLine();
-
-            Console.WriteLine("Country:");
-            string country = Console.ReadLine();
-
-            Console.WriteLine("Phone:");
-            string phone = Console.ReadLine();
-
-            Console.WriteLine("Fax:");
-            string fax = Console.ReadLine();
+            Customer c = ReadInfo();
+            c.CustomerID = customerID;
+            string companyName = c.CompanyName;
+            string contactName = c.ContactName;
+            string contactTitle = c.ContactTitle;
+            string address = c.Address;
+            string city = c.City;
+            string region = c.Region;
+            string postalCode = c.PostalCode;
+            string country = c.Country;
+            string phone = c.Phone;
+            string fax = c.Fax;
 
             Console.WriteLine($"Adding new row: {customerID}, {companyName}, {contactName}, {contactTitle}, {address}, {city}, {region}, {postalCode}, {country}, {phone}, {fax}");
 
@@ -106,6 +89,43 @@ namespace AdoNetHarjoitus
             // Suljetaan yhteys
             sc.Close();
             Console.WriteLine("Connection closed.");
+        }
+
+        // Luodaan uusi käyttäjä
+        private static Customer ReadInfo()
+        {
+            Customer customer = new();
+
+            Console.WriteLine("Company name:");
+            customer.CompanyName = Console.ReadLine();
+
+            Console.WriteLine("Contact name:");
+            customer.ContactName = Console.ReadLine();
+
+            Console.WriteLine("Contact title:");
+            customer.ContactTitle = Console.ReadLine();
+
+            Console.WriteLine("Address:");
+            customer.Address = Console.ReadLine();
+
+            Console.WriteLine("City:");
+            customer.City = Console.ReadLine();
+
+            Console.WriteLine("Region:");
+            customer.Region = Console.ReadLine();
+
+            Console.WriteLine("Postal Code:");
+            customer.PostalCode = Console.ReadLine();
+
+            Console.WriteLine("Country:");
+            customer.Country = Console.ReadLine();
+
+            Console.WriteLine("Phone:");
+            customer.Phone = Console.ReadLine();
+
+            Console.WriteLine("Fax:");
+            customer.Fax = Console.ReadLine();
+            return customer;
         }
     }
 }
