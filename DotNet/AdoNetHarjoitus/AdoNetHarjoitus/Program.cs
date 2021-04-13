@@ -1,6 +1,4 @@
-﻿// Connects to a local database and executes and prints a query
-
-using System;
+﻿using System;
 using System.Data.SqlClient;
 
 namespace AdoNetHarjoitus
@@ -11,20 +9,22 @@ namespace AdoNetHarjoitus
         {
             string myServerAddress = @"localhost\SQLEXPRESS";
             string myDataBase = "Northwind";
-            
             string connectionString = $"Server={myServerAddress};Database={myDataBase};Trusted_Connection=True;";
+
+            // Etsitään Suomalaiset asiakkaat
             string queryString = "SELECT * FROM Customers WHERE Country='Finland'";
 
             SqlConnection sc = new(connectionString);
             SqlCommand command = new(queryString, sc);
 
-            // Opening connection
+            // Avataan yhteys
             sc.Open();
 
             Console.WriteLine($"Connected to database {myDataBase}.");
             SqlDataReader reader = command.ExecuteReader();
 
-            // Print all found company names
+            // tulostetaan löydetyt nimet
+            Console.WriteLine("Customers from Finland:");
             while (reader.Read())
             {
                 string name = reader["CompanyName"].ToString();
@@ -33,17 +33,13 @@ namespace AdoNetHarjoitus
 
             reader.Close();
 
-            // Add new customer ot database
+            // Aloitetaan uuden entryn lisäys
             Console.WriteLine("Add a row to the Northwind customers database. Fill the following information:");
 
             string customerID = "";
-
-            /*
             string idQueryString = "SELECT CustomerID FROM Customers";
-            SqlCommand idQuery = new(idQueryString, sc);
-            string currentIDs = reader["CustomerID"].ToString();
-            */
-
+            
+            // Ask for a unique Customer ID
             bool idInUse = true;
             while (idInUse)
             {
@@ -51,11 +47,13 @@ namespace AdoNetHarjoitus
                 customerID = Console.ReadLine();
                 idInUse = false;
 
-                /*
-                SqlDataReader idReader = idQuery.ExecuteReader();
+                // Vertaa nykyisten asiakkaiden IDn kanssa
+                // Kysy uudestaan jos ID on jo käytössä
+                command = new(idQueryString, sc);
+                SqlDataReader idReader = command.ExecuteReader();
                 while (idReader.Read())
                 {
-                    
+                    string currentIDs = idReader["CustomerID"].ToString();
                     idInUse = false;
                     if(customerID == currentIDs)
                     {
@@ -64,9 +62,9 @@ namespace AdoNetHarjoitus
                     }
                 }
                 idReader.Close();
-                */
             }
 
+            // Kysytään loput tiedot
             Console.WriteLine("Company name:");
             string companyName = Console.ReadLine();
 
@@ -97,14 +95,15 @@ namespace AdoNetHarjoitus
             Console.WriteLine("Fax:");
             string fax = Console.ReadLine();
 
-            Console.WriteLine($"Adding new entry: {customerID},{companyName},{contactName},{contactTitle},{address},{city},{region},{postalCode},{country},{phone},{fax}");
+            Console.WriteLine($"Adding new row: {customerID}, {companyName}, {contactName}, {contactTitle}, {address}, {city}, {region}, {postalCode}, {country}, {phone}, {fax}");
 
+            // Syötä annetut arvot
             string insertString = $"INSERT INTO Customers (CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax)" +
                 $" VALUES ('{customerID}','{companyName}','{contactName}','{contactTitle}','{address}','{city}','{region}','{postalCode}','{country}','{phone}','{fax}')";
             command = new(insertString, sc);
             command.ExecuteNonQuery();
 
-            // Closing connection
+            // Suljetaan yhteys
             sc.Close();
             Console.WriteLine("Connection closed.");
         }
