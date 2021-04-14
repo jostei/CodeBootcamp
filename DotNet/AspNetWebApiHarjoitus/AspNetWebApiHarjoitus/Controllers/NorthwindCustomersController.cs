@@ -13,6 +13,7 @@ namespace AspNetWebApiHarjoitus.Controllers
     [ApiController]
     public class NorthwindCustomersController : ControllerBase
     {
+        // Haetaan kaikki asiakkaat
         [HttpGet]
         [Route("asiakkaat")]
         public List<Customer> KaikkiAsiakkaat()
@@ -21,12 +22,13 @@ namespace AspNetWebApiHarjoitus.Controllers
             return konteksti.Customers.ToList();
         }
 
+        // Haetaan yhden maan asiakkaat routen perusteella
         [HttpGet]
-        [Route("suomiasiakkaat")]
-        public List<Customer> Suomiasaikkaat()
+        [Route("yksiMaa/{maanNimi}")]
+        public List<Customer> YksiMaaAsiakas(string maanNimi)
         {
             NorthwindContext konteksti = new();
-            return konteksti.Customers.Where(c => c.Country == "Finland").ToList();
+            return konteksti.Customers.Where(c => c.Country == maanNimi).ToList();
         }
     }
 }
