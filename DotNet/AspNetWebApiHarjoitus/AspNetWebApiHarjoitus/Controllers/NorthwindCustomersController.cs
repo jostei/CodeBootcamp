@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AspNetWebApiHarjoitus.Models;
+using System.Data.SqlClient;
 
 namespace AspNetWebApiHarjoitus.Controllers
 {
@@ -13,6 +14,8 @@ namespace AspNetWebApiHarjoitus.Controllers
     [ApiController]
     public class NorthwindCustomersController : ControllerBase
     {
+        
+
         // Haetaan kaikki asiakkaat
         [HttpGet]
         [Route("asiakkaat")]
@@ -30,5 +33,31 @@ namespace AspNetWebApiHarjoitus.Controllers
             NorthwindContext konteksti = new();
             return konteksti.Customers.Where(c => c.Country == maanNimi).ToList();
         }
+
+        // Lisää vastaanotetun JSONin tietokantaan
+        [HttpPost]
+        [Route("uusiAsiakas")]
+        public void PostUusiAsiakas([FromBody] Customer asiakas)
+        {
+            NorthwindContext konteksti = new();
+            konteksti.Customers.Add(asiakas);
+            konteksti.SaveChanges();
+        }
+
+        /* JSON esimerkki testaukseen
+        {
+        "CustomerId" : "AAAAB",
+        "CompanyName" : "JSON Testi Oy",
+        "ContactName" : "TEST",
+        "ContactTitle" : "TEST",
+        "Address" : "TEST",
+        "City" : "TEST",
+        "Region" : "TEST",
+        "PostalCode" : "TEST",
+        "Country" : "TEST",
+        "Phone" : "TEST",
+        "Fax" : "TEST"
+        }
+        */
     }
 }
