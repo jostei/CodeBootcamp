@@ -10,3 +10,7 @@ Aja package manager consolessa seuraavat (tässä host = localhost/SQLEXPRESS ja
 Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=Northwind;User Id=jostei;Password=Salainen;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+
+Ongelmia:
+no project -> työkansio väärä, vaihda package managerin kansiota
