@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import IpsumKomponentti from './IpsumKomponentti';
+import UusiProppi from './UusiProppi';
+import LuokkaMuotoinen from './LuokkaMuotoinen';
+/*import Taulukko from './Taulukko';*/
+import ApiConnect from './ApiConnect';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <UusiProppi />
+    <ApiConnect id={2} url="https://jsonplaceholder.typicode.com/todos/" />
     <IpsumKomponentti  />
+    <LuokkaMuotoinen />
   </React.StrictMode>,
   document.getElementById('root')
 );
