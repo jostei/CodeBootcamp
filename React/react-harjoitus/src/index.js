@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import IpsumKomponentti from './IpsumKomponentti';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <IpsumKomponentti  />
   </React.StrictMode>,
   document.getElementById('root')
 );
